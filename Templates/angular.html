@@ -1,0 +1,165 @@
+<div class="container-fluid">
+
+    <div ng-controller="angularController">
+
+        <div>
+        First Name : {{employee.firstname}}
+        </div>
+
+        <div>
+        Last Name : {{employee.lastname}}
+        </div>
+
+        <div>
+        Gender : {{employee.gender}}
+        </div>
+
+
+            </br></br>
+            <input type="text" ng-model="message" />
+            <div>{{message}}</div>
+
+            </br></br>
+
+
+
+
+
+                <div>
+                    Name : {{country.name}}
+                </div>
+                <div>
+                    Capital : {{country.capital}}
+                </div>
+                <div>
+                <img ng-src="{{ country.flag }}" style="height:100px; width:200px" alt="{{ country.name + ' Flag'}}" />
+                </div>
+
+
+                </br></br>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Gender</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="employee in employees">
+                              <td>{{employee.firstname}}</td>  
+                               <td>{{employee.lastname}}</td> 
+                                <td>{{employee.gender}}</td> 
+                                 <td>{{employee.salary}}</td> 
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+                </br></br>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Likes</th>
+                            <th>Dislikes</th>
+                            <th>Like/Dislike</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="technology in technologies">
+                              <td>{{technology.name}}</td>  
+                               <td>{{technology.likes}}</td> 
+                                <td>{{technology.dislikes}}</td> 
+                                 <td>
+                                    <input type="button" value="Like" ng-click="incrementLikes(technology)" >
+                                    <input type="button" value="Dislike" ng-click="incrementDislikes(technology)" >
+                                     
+                                     </td> 
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+                </br></br>
+Row to dispaly: <input type="number" step="1" min="0" max="5" ng-model="rowLimit" />
+</br></br>
+Order By : <select ng-model="sortColumn">
+<option value="+name">Name Asc</option>
+<option value="-name">Name Desc</option>
+<option value="gender">Gender Asc</option>
+<option value="dateofBirth">Date of Birth Asc</option>
+<option value="-salary">Salary Desc</option>
+
+</select>
+</br></br>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Date of Birth</th>
+                            <th>Gender</th>
+                            <th>Salary (number)</th>
+                            <th>Salary (currency)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="emp in emps | limitTo:rowLimit | orderBy: sortColumn">
+                              <td>{{emp.name | uppercase}}</td>  
+                               <td>{{emp.dateofBirth | date:"dd/MM/yyyy"}}</td> 
+                                <td>{{emp.gender | lowercase}}</td> 
+                                 <td>{{emp.salary | number:2}}</td>
+                                 <td>{{emp.salary | currency:"€":1}}</td> 
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+                </br></br>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th ng-click="sortData('name')">Name <div ng-class="getSortClass('name')"></div></th>
+                            <th ng-click="sortData('dateofBirth')">Date of Birth <div ng-class="getSortClass('dateofBirth')"></div></th>
+                            <th ng-click="sortData('gender')">Gender <div ng-class="getSortClass('gender')"></div></th>
+                            <th ng-click="sortData('salary')">Salary <div ng-class="getSortClass('salary')"></div></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr ng-repeat="emp in emps | orderBy:sortColumn:reverseSort">
+                              <td>{{emp.name | uppercase}}</td>  
+                               <td>{{emp.dateofBirth | date:"dd/MM/yyyy"}}</td> 
+                                <td>{{emp.gender | lowercase}}</td> 
+                                 <td>{{emp.salary | number:2}}</td>
+                                 
+                        </tr>
+                    </tbody>
+                </table>
+
+
+    </div>
+</div>
+

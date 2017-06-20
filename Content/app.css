@@ -1,0 +1,68 @@
+header, footer {
+    background-color: #004a4a;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+}
+
+aside {
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.title {
+    color:darkblue;
+}
+
+#orderedlist{
+    color:darkgreen;
+}
+
+nav {
+background-color: #222;
+}
+
+section, article {
+padding: 10px;
+background-color: #eee; 
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+table{
+    border-collapse: collapse;
+    font-family: Arial;
+}
+
+td{
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {
+    border: 1 px solid black;
+    padding: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.arrow-up{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 10px solid black; 
+    display: inline-block;
+}
+
+.arrow-down{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black; 
+    display: inline-block;
+}
