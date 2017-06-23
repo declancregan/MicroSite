@@ -9,38 +9,111 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
+            <script src="Scripts/modernizr-2.6.2.js"></script>
+            <script src="Scripts/jquery-1.8.3.min.js"></script>
 
             <script src="Scripts/angular.min.js"></script>
             <script src="Scripts/angular-route.min.js"></script>
             <script src="Scripts/script.js"></script>
             <link href="Content/app.css" rel="stylesheet" />
 
+            
+
     </head>
 
-    <body ng-app="angularApp">
 
-        <header class="container-fluid">
-            <h1>Visit Safe Work</h1>
 
-            <div style="text-align: right;">
-                <button type="button" class="btn btn-success btn-lg">Request Demo ></button>
+
+
+
+<body ng-app="angularApp">
+
+
+
+<header> 
+
+
+
+  <div class="action-bar ">
+    <div class="container">
+        <div class="pull-right">
+            <div class="topmost-menu">
+                <ul class="list-inline">
+                    <li class="top-small"></li>
+                    
+                </ul>
             </div>
-        </header>
+        </div>
 
-<nav class="container-fluid" >
-    <ul class="nav navbar-inverse navbar-nav">
-        <li class="active"><a href="home">Home</a></li>
-        <li><a href="courses">About Us</a></li>
-        <li><a href="students">Contact</a></li>
-        <li><a href="angular">Angular</a></li>
-    </ul>
-</nav>
+    </div>
+</div>
+
+    <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand"><img src="Images/usa-flag.png" /></a>
+           
+
+        </div>
+        <div class="navbar-collapse collapse navbar-right no-padding-right" id="main-menu">
+            
+            
+            <ul class="nav navbar-nav">
+                
+                                
+                <li class="active"><a href="/">Home</a></li>
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Solutions<span class="caret"></span></a>
+                    <ul class="dropdown-menu ">
+
+                        <li class=""><a href="module1">Module 1</a></li>
+                        <li class=""><a href="module2">Module 2</a></li>
+                        <li class=""><a href="module3">Module 3</a></li>
+                        <li class=""><a href="module4">Module 4</a></li>
+                        
+                        
+                    </ul>
+                </li>
+               
+                <li class="dropdown ">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+                    <ul class="dropdown-menu ">
+                        <li class=""><a href="aboutus">About Us</a></li>
+                        <li class=""><a href="news">News</a></li>
+                    </ul>
+                </li>
+                <li class=""><a href="contact">Contact</a></li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+  
+
+
+
+
+
+</header>
+
+
+
 
 
 
 <div class="mainContent">
 <ng-view></ng-view>
 </div>
+
 
 
 
@@ -59,6 +132,38 @@
  </br></br>
 
  <i class="fa fa-twitter" style="font-size:48px;color:#00aced;">twitter</i>
+
+ 
+
+
+                <ul class="list-inline">
+                 <li><a target="new" href="http://www.facebook.com/HeightForHire"> <img src="Images/facebook.png" alt="Facebook" title="Facebook" /></a></li>
+                    <li><a target="new" href="http://twitter.com/HeightForHire"><img src="Images/twitter.png" alt="Twitter" title="Twitter" /></a></li>
+                    <li><a target="new" href="http://youtube.com/HeightForHire"> <img src="Images/youtube.png" alt="YouTube" title="YouTube" /></a></li>
+                    <li><a target="new" href="https://www.linkedin.com/company/height-for-hire-easi-uplifts"> <img src="Images/linkedin.png" alt="LinkedIn" title="LinkedIn" /></a>
+                    </li>
+                </ul>
+
+
+                <ul class="list-inline">
+  <li class="list-inline-item">Lorem ipsum</li>
+  <li class="list-inline-item">Phasellus iaculis</li>
+  <li class="list-inline-item">Nulla volutpat</li>
+</ul>
+
+
+
+
+                <ul class="list-inline">
+                    <li>Lan Line <span>Tel No:</span> <b><a href="tel:1800123456">1800 12 34 56</a></b></li>
+                    <li>Mobile <span>Mobile No:</span> <b><a href="tel:0863087117">086 3087117</a></b></li>
+                    
+                    <li> <a href="contact" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+                    <li> <a href="/work-platform-depots" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-map-marker"></span> Locations</a></li>
+
+                </ul>
+
+
 
  </footer>
 

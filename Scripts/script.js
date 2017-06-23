@@ -9,16 +9,24 @@ var app = angular.module("angularApp", ["ngRoute"])
                         controller: "homeController"
                     })
                       
-                    .when("/courses", {
+                    .when("/aboutus", {
                         templateUrl: "Templates/aboutus.html",
                         controller: "aboutusController"
                     })
 
-                    .when("/students", {
+                    .when("/contact", {
                         templateUrl: "Templates/contact.html",
                         controller: "contactController"
                       
                     })
+
+
+                    .when("/news", {
+                        templateUrl: "Templates/news.html",
+                        controller: "newsController"
+                      
+                    })
+
 
                     .when("/angular", {
                         templateUrl: "Templates/angular.html",
@@ -47,6 +55,20 @@ var app = angular.module("angularApp", ["ngRoute"])
 
                         .controller("contactController", function ($scope) {
                             $scope.students = ["John", "Mary", "James", "Ellen"];
+
+                            var subjects = [
+                                    {id: "1", value: "Hasting"},
+                                    {id: "2", value: "Paul"},
+                                    {id: "3", value: "Holland"},
+
+                                ];
+                                            $scope.subjects = subjects
+
+                        })
+
+
+                        .controller("newsController", function ($scope) {
+                            $scope.title = "News";
                         })
 
                         
