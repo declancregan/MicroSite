@@ -22,25 +22,10 @@ nav {
 background-color: #222;
 }
 
-section, article {
+.panel:hover{
+background: #eee; /* make this whatever you want */
+cursor: pointer;
 
-
-background-color: #eee;
-    
-    border: 25px solid green;
-    padding: 10px;
-    margin: 25px;
-
-}
-
-.WSPanel{
-
-    background-color: #eee;
-
-    border: 5px solid #eee;
-    padding: 5px;
-    margin-top: 10px;
-       
 }
 
 
@@ -86,3 +71,7 @@ th {
     border-top: 10px solid black; 
     display: inline-block;
 }
+
+
+
+

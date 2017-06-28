@@ -170,3 +170,4 @@ var app = angular.module("angularApp", ["ngRoute"])
 app.controller('MainController', ['$scope', function($scope){
     $scope.timestamp = Date();
 }]);
+
